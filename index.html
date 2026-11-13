@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Render test</title>
+</head>
+<body>
+<div id="root"></div>
+<script>
+(function () {
+  // Rendered only by JavaScript; the full marker is assembled at runtime, so it never appears in the HTML source.
+  var marker = "TLX_BROWSER_RENDER_" + "E2E_268CF533";
+  var root = document.getElementById("root");
+  var h1 = document.createElement("h1");
+  h1.textContent = "Talvionex browser rendering test page";
+  root.appendChild(h1);
+  var paragraphs = [
+    "This page exists only to verify that the Talvionex website import can render a page whose content is produced by JavaScript.",
+    "Its initial HTML contains almost no readable text, so a static reader sees an empty application shell and asks the sandboxed browser to render it instead.",
+    "Once the script runs, this heading and these paragraphs appear in the document. They contain no personal information, no tracking and no links to other services.",
+    "The page is served by GitHub Pages over HTTPS and can be removed after the test without affecting anything else.",
+    "Verification marker: " + marker + "."
+  ];
+  for (var i = 0; i < paragraphs.length; i++) {
+    var p = document.createElement("p");
+    p.textContent = paragraphs[i];
+    root.appendChild(p);
+  }
+})();
+</script>
+</body>
+</html>
