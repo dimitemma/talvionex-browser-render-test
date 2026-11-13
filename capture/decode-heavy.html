@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280">
+<title>Talvionex capture test: decode-heavy page</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #101418; color: #f0f0f0; font: 16px/1.4 sans-serif; }
+  h1 { margin: 0; padding: 24px 40px; font-size: 28px; }
+  p { margin: 0; padding: 0 40px 24px; max-width: 1100px; }
+  img { display: block; margin: 0 40px 24px; width: 1200px; height: 1200px; }
+  img.wide { height: 300px; }
+  img.blurred { filter: blur(6px) saturate(1.4); }
+</style>
+</head>
+<body>
+<h1>Talvionex capture test: decode-heavy page</h1>
+<p>Five large but highly compressible PNG gradients (four 4096 x 4096 and one 8192 x 2048; about
+256 MiB once decoded, about 300 KB transferred), scaled down by the browser, one of them with a
+CSS filter. The page is about 5,000 pixels tall, so a capture is cut at its maximum height.
+Nothing here loops, grows or loads anything else.</p>
+<img src="img/heavy-1.png" width="1200" height="1200" alt="Gradient 1" loading="eager" decoding="sync">
+<img src="img/heavy-2.png" width="1200" height="1200" alt="Gradient 2" loading="eager" decoding="sync" class="blurred">
+<img src="img/heavy-5.png" width="1200" height="300" alt="Gradient 5" loading="eager" decoding="sync" class="wide">
+<img src="img/heavy-3.png" width="1200" height="1200" alt="Gradient 3" loading="eager" decoding="sync">
+<img src="img/heavy-4.png" width="1200" height="1200" alt="Gradient 4" loading="eager" decoding="sync">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280">
+<title>Talvionex capture test: basic page</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #f4f1ea; color: #1d1d1b; font: 18px/1.5 Georgia, serif; }
+  header { position: absolute; top: 24px; left: 40px; right: 40px; height: 60px; }
+  header h1 { margin: 0; font-size: 32px; }
+  /* Positive control for the pixel check: a solid block whose centre is (140, 220). */
+  #marker { position: absolute; top: 120px; left: 40px; width: 200px; height: 200px; background: #1f6feb; }
+  main { position: absolute; top: 120px; left: 300px; width: 900px; }
+  .card { background: #ffffff; border: 1px solid #d8d2c4; border-radius: 8px; padding: 24px; margin-bottom: 24px; height: 220px; }
+  footer { position: absolute; top: 1400px; left: 40px; height: 40px; }
+</style>
+</head>
+<body>
+<header><h1>Talvionex capture test: basic page</h1></header>
+<div id="marker" aria-hidden="true"></div>
+<main>
+  <section class="card"><h2>A plain page</h2><p>Static HTML and inline CSS only. No script, no external resource, no cookie and no tracking.</p></section>
+  <section class="card"><h2>Expected screenshot</h2><p>1280 pixels wide, a little over 1400 pixels tall, with a solid blue block at the top left.</p></section>
+  <section class="card"><h2>Purpose</h2><p>A successful, predictable capture for the Talvionex browser rehearsal (B3 M12, E1).</p></section>
+  <section class="card"><h2>Stable content</h2><p>This page never changes between runs; its SHA-256 is pinned in capture/SHA256SUMS.</p></section>
+</main>
+<footer>End of the basic capture page.</footer>
+</body>
+</html>
